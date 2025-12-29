@@ -1,15 +1,26 @@
 meta {
   name: Create Product
   type: http
-  seq: 2
+  seq: 3
 }
 
 post {
   url: http://127.0.0.1:8000/api/products
-  body: none
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "name": "Laptop",
+    "description": "Gaming laptop",
+    "price": 3500,
+    "stock": 10
+  }
+  
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

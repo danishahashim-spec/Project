@@ -1,13 +1,23 @@
 meta {
   name: Update Product
   type: http
-  seq: 4
+  seq: 6
 }
 
 put {
   url: http://127.0.0.1:8000/api/products/1
-  body: none
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "name": "Laptop Pro",
+    "description": "Updated model",
+    "price": 4000,
+    "stock": 8
+  }
+  
 }
 
 settings {
