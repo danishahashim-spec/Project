@@ -6,8 +6,21 @@ meta {
 
 get {
   url: http://127.0.0.1:8000/api/products
-  body: none
+  body: json
   auth: inherit
+}
+
+headers {
+  Authorization: Bearer 7|otHSSKxXbaCby2JfeEeZsHKsTibl8cQngSh8G8Yce513f0c5
+  Accept: application/json
+}
+
+body:json {
+  {
+    "name":"Illegal Product",
+    "price": 10,
+    "stock":5
+  }
 }
 
 settings {
